@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Load CSS conditionally</title>
+    <style>
+      body {
+    background-color: black;
+    color: white;
+  }
+  h2 {
+    color: green;
+  }
+    </style>
+  </head>
+  <body>
+    <h2>Welcome To GFG</h2>
+    <p>Now, we are going to learn some stuff regarding CSS.</p>
+    <script>
+        if (screen.width < 900) {
+  var link = document.createElement("link");
+  link.setAttribute("rel", "stylesheet");   //OR You can simply use -> (link.rel = "stylesheet";)
+  link.setAttribute("href", "style.css");   //OR You can simply use -> (link.href = "style.css";)
+  document.head.appendChild(link);
+}
+    </script>
+</body>
+</html>
